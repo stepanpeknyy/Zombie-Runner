@@ -10,7 +10,6 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] AudioSource pickupFirstAidKitSound;
     [SerializeField] Text healthText;
     [SerializeField] Text scoreText;
-    [SerializeField] Canvas introCanvas;
     [SerializeField] Canvas hintCanvas;    
     [SerializeField] Canvas shortgunCanvas;
     [SerializeField] Canvas machineGunCanvas;
@@ -33,7 +32,6 @@ public class PlayerHealth : MonoBehaviour
     {
         machineGunCanvas.enabled = false;
         shortgunCanvas.enabled = false;
-        introCanvas.enabled = true;
         hintCanvas.enabled = true;
         healthText.text = "Health " + hitPoints;
         StartCoroutine(HideText());
@@ -83,7 +81,6 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(15);
         machineGunCanvas .enabled = false;
         shortgunCanvas .enabled = false;
-        introCanvas .enabled = false;
         hintCanvas .enabled = false;
     }
 }

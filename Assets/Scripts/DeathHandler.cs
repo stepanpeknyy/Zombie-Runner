@@ -17,6 +17,7 @@ public class DeathHandler : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Time.timeScale = 0;
+        FindObjectOfType<Weapon>().enabled = false;
         FindObjectOfType<WeaponSwitcher>().enabled = false;
     }
 }
